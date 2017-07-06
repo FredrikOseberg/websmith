@@ -798,7 +798,7 @@ module.exports = [{
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-	img: 'https://dl.dropboxusercontent.com/u/9137091/Portfolio2/Screen%20Shot%202017-05-02%20at%2011.08.57.png',
+	img: 'img/portfolio/avidyx.png',
 	url: 'http://www.adrenalineadvisor.com'
 }, {
 	name: 'Weather App',
@@ -807,7 +807,7 @@ module.exports = [{
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-	img: 'https://dl.dropboxusercontent.com/u/9137091/Portfolio2/Screen%20Shot%202017-07-04%20at%2020.44.47.png',
+	img: 'img/portfolio/weatherapp.png',
 	url: 'https://codepen.io/khare/full/vmaVqV/'
 }, {
 	name: 'Wikipedia Viewer',
@@ -816,7 +816,7 @@ module.exports = [{
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-	img: 'https://dl.dropboxusercontent.com/u/9137091/Portfolio2/Screen%20Shot%202017-07-04%20at%2020.44.11.png',
+	img: 'img/portfolio/wikipedia.png',
 	url: 'https://codepen.io/khare/full/yXzzxg/'
 }, {
 	name: 'Twitch JSON API',
@@ -825,7 +825,7 @@ module.exports = [{
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-	img: 'https://dl.dropboxusercontent.com/u/9137091/Portfolio2/Screen%20Shot%202017-07-04%20at%2020.43.20.png',
+	img: 'img/portfolio/twitch.png',
 	url: 'https://codepen.io/khare/full/YQvXdq/'
 }];
 
