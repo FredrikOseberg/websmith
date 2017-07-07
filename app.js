@@ -11,14 +11,16 @@ const processWrappers = document.querySelectorAll('.process-wrapper');
 const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage']
 
 function cycleWords(words) {
-	var counter = 0;
+	let counter = 0;
 	wordsSpan.textContent = words[0];
-	setInterval(changeWord, 2000);
+	const intervalId = setInterval(changeWord, 2000);
 	function changeWord() {
 		counter++;
 		wordsSpan.textContent = words[counter];
+		console.log('running');
 		if (counter >= words.length) {
 			wordsSpan.textContent = words[words.length - 1];
+			clearInterval(intervalId);
 		}
 	}
 }
