@@ -60,17 +60,96 @@ a, a:focus, a:visited, a:hover, a:active {
 
 /** NAVBAR **/
 
+/** SIDENAV **/
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #444444;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #696969;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 .websmith-navbar {
-	height: 80px;
+	display:flex;
+	justify-content: center;
 	position: fixed;
 	top: 0;
 	z-index: 1000;
-	overflow: hidden;
 	background-color: #fff;
 	width: 100%;
 }
 
+.navbar-content {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	position: relative;
+}
 
+.navigation {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+.navigation li {
+	padding: 10px 20px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	border: 1px solid #004e92;
+	margin: 5px;
+	transition: all 0.5s;
+	color: #004e92;
+	font-family: Roboto;
+	font-size: 1.1em;
+	border-radius: 3px;
+}
+
+.navigation li.mobile-navigation {
+	display: none;
+	cursor: pointer;
+}
+
+.navigation li:hover {
+	background-color: #004e92;
+	color: #fff;
+}
 
 .logo {
 	font-family: 'Satisfy';
@@ -563,6 +642,7 @@ a, a:focus, a:visited, a:hover, a:active {
 	justify-content: center;
 	align-items: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s ease;
 }
 
 .tech-logo:hover {
@@ -867,15 +947,36 @@ a, a:focus, a:visited, a:hover, a:active {
 	#about-me {
 		text-align: center;
 	}
+	#websmith-footer {
+		flex-direction: column;
+		align-items: center;
+	}
 
 	#about-me p {
 		width: 100%;
 		margin: 15px auto;
 	}
 	.footer-contact {
+		padding: 25px;
 		flex-direction: column;
+		align-items: center;
+		margin-left: 0;
 	}
 	.footer-contact li {
-		padding-top: 0;
+		padding: 10px;
 	}
+	.navigation li.mobile-navigation {
+		display: block;
+		border: none;
+		font-size: 2em;
+	}
+	.navigation li.main-nav-links {
+		display: none;
+	}
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }

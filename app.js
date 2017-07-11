@@ -8,7 +8,20 @@ const wordsSpan = document.querySelector('#word');
 const mainNavigation = document.querySelector('.websmith-navbar');
 const processHexagons = document.querySelectorAll('.hexagon');
 const processWrappers = document.querySelectorAll('.process-wrapper');
-const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage']
+const mobileNav = document.querySelector('#mobile-nav');
+const sideNavLinks = document.querySelectorAll('.sidenav a');
+const closeButton = document.querySelector('.closebtn');
+const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 
 function cycleWords(words) {
 	let counter = 0;
@@ -17,7 +30,6 @@ function cycleWords(words) {
 	function changeWord() {
 		counter++;
 		wordsSpan.textContent = words[counter];
-		console.log('running');
 		if (counter >= words.length) {
 			wordsSpan.textContent = words[words.length - 1];
 			clearInterval(intervalId);
@@ -70,17 +82,19 @@ function checkSlide(e) {
 	const sliderImages = document.querySelectorAll('.slide-in');
 
 	sliderImages.forEach(sliderImage => {
-		// Halfway through image
-		const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-		// Bottom of the image
-		const isHalfShown = slideInAt > sliderImage.offsetTop;
+		setTimeout(() => {
+			// Halfway through image
+			const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+			const isHalfShown = slideInAt > sliderImage.offsetTop;
 
-		if (isHalfShown) {
-			sliderImage.classList.add('slide-in-active');
-			setTimeout(() => {
-				sliderImage.parentNode.classList.add('portfolio-item-active');
-			}, 800)
-		}
+			if (isHalfShown) {
+				sliderImage.classList.add('slide-in-active');
+				setTimeout(() => {
+					sliderImage.parentNode.classList.add('portfolio-item-active');
+				}, 800)
+			}
+		}, 400);
+
 	});
 }
 
@@ -94,6 +108,9 @@ cycleWords(words);
 
 // Event Handlers
 function handleScroll(e) {
+	const navLinks = document.querySelectorAll('.main-nav-links');
+	const scrollingButton = document.querySelector('.scrolling-nav-link');
+
 	if (window.pageYOffset >= 80) {
 		mainNavigation.classList.add('scrolling');
 	} else {
@@ -138,6 +155,9 @@ function handleProcessClick(e) {
 
 // Event Listener
 window.addEventListener('scroll', handleScroll);
+mobileNav.addEventListener('click', openNav);
+closeButton.addEventListener('click', closeNav);
+sideNavLinks.forEach(link => link.addEventListener('click', closeNav));
 processHexagons.forEach(hexagon => hexagon.addEventListener('click', handleProcessClick));
 processWrappers.forEach(wrapper => wrapper.addEventListener('click', handleProcessClick));
 
