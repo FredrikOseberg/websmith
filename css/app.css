@@ -535,6 +535,11 @@ a, a:focus, a:visited, a:hover, a:active {
 	font-size: 1.4em;
 	opacity: 0;
 	height: 0;
+	display: none;
+}
+
+.process-content.show {
+	display: block;
 }
 
 
@@ -949,7 +954,7 @@ a, a:focus, a:visited, a:hover, a:active {
 	}
 
 	.process-content {
-		padding: 30px;
+		padding: 0 30px 30px 30px;
 		text-align: center;
 	}
 	

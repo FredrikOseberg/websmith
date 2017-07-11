@@ -81,6 +81,7 @@ function renderPortfolioItems() {
 
 function checkSlide(e) {
 	const sliderImages = document.querySelectorAll('.slide-in');
+
 	sliderImages.forEach(sliderImage => {
 		setTimeout(() => {
 			// Halfway through image
@@ -114,6 +115,7 @@ function handleProcessClick(e) {
 	const hexItem = this.querySelector('div[data-target="hexagon"]');
 	const wrapper = hexItem.parentNode;
 	const infoBox = hexItem.nextElementSibling;
+	const infoParagraph = infoBox.children[0];
 
 	if (hexItem.dataset.target === 'hexagon') {
 		if (!wrapper.classList.contains('clicked')) {
@@ -125,14 +127,16 @@ function handleProcessClick(e) {
 				wrapper.style.backgroundColor = '#cc243b';
 			}, 300);
 			setTimeout(() => {
-				infoBox.children[0].classList.add('active');
+				infoParagraph.classList.add('show');
 			}, 600);
+			setTimeout(() => infoParagraph.classList.add('active'), 600);
 		} else {
 			setTimeout(() => {
 				infoBox.classList.remove('problem-information-active');
 				wrapper.classList.remove('process-wrapper-active');
 				wrapper.style.backgroundColor = '#fff';
-				infoBox.children[0].classList.remove('active');
+				infoParagraph.classList.remove('show');
+				infoParagraph.classList.remove('active');
 			}, 300);
 
 			setTimeout(() => {
@@ -146,12 +150,12 @@ function handleProcessClick(e) {
 	}
 }
 
-// Setup app
+// Setup application
 function init() {
 	renderPortfolioItems()
 	.then(() => window.addEventListener('scroll', debounce(checkSlide)));
 
-	cycleWords(words);
+     cycleWords(words);
 }
 
 // Event Listener
