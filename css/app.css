@@ -12,6 +12,7 @@ h6 {
 p {
 	font-family: Roboto, sans-serif;
 	color: #4e4e4e;
+	font-size: 1.2em;
 }
 
 body {
@@ -276,7 +277,6 @@ a, a:focus, a:visited, a:hover, a:active {
 }
 
 .special-offer p {
-	font-size: 1.2em;
 	line-height: 1.6;
 }
 
@@ -532,7 +532,6 @@ a, a:focus, a:visited, a:hover, a:active {
 	color: #fff;
 	padding: 25px;
 	transition: all 0.5s;
-	font-size: 1.4em;
 	opacity: 0;
 	height: 0;
 	display: none;
@@ -584,7 +583,6 @@ a, a:focus, a:visited, a:hover, a:active {
 }
 
 .learning-box p {
-	font-size: 1.2em;
 	line-height: 1.7;
 	text-align: center;
 	margin: 25px;
@@ -694,8 +692,8 @@ a, a:focus, a:visited, a:hover, a:active {
 }
 
 #about-me p {
-	font-size: 1.1em;
 	line-height: 1.5;
+	padding: 5px;
 }
 
 #about-me a {
@@ -715,6 +713,10 @@ a, a:focus, a:visited, a:hover, a:active {
 	left: -10px;
 }
 
+.about-me-bttn {
+	margin-top: 50px;
+}
+
 
 /** MANIFESTO **/
 
@@ -728,7 +730,6 @@ a, a:focus, a:visited, a:hover, a:active {
 #manifesto p {
 	padding: 20px;
 	color: #fff;
-	font-size: 1.2em;
 	max-width: 400px;
 	margin: 0 auto;
 	line-height: 1.6;
@@ -930,7 +931,7 @@ a, a:focus, a:visited, a:hover, a:active {
 	}
 	.about-image-secondary {
 		display: block;
-		height: 170px;
+		height: 185px;
 		width: 140px;
 		top: -60px;
 		left: 5px;
