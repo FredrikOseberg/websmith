@@ -9,6 +9,7 @@ const mainNavigation = document.querySelector('.websmith-navbar');
 const processHexagons = document.querySelectorAll('.hexagon');
 const processWrappers = document.querySelectorAll('.process-wrapper');
 const mobileNav = document.querySelector('#mobile-nav');
+const processListItems = document.querySelectorAll('.process-list-item');
 const sideNavLinks = document.querySelectorAll('.sidenav a');
 const closeButton = document.querySelector('.closebtn');
 const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
@@ -80,7 +81,6 @@ function renderPortfolioItems() {
 
 function checkSlide(e) {
 	const sliderImages = document.querySelectorAll('.slide-in');
-
 	sliderImages.forEach(sliderImage => {
 		setTimeout(() => {
 			// Halfway through image
@@ -98,14 +98,6 @@ function checkSlide(e) {
 	});
 }
 
-
-
-
-renderPortfolioItems()
-	.then(() => window.addEventListener('scroll', debounce(checkSlide)));
-
-cycleWords(words);
-
 // Event Handlers
 function handleScroll(e) {
 	const navLinks = document.querySelectorAll('.main-nav-links');
@@ -119,14 +111,14 @@ function handleScroll(e) {
 }
 
 function handleProcessClick(e) {
-	const hexItem = this;
-	const wrapper = this.parentNode;
-	const infoBox = this.nextElementSibling;
+	const hexItem = this.querySelector('div[data-target="hexagon"]');
+	const wrapper = hexItem.parentNode;
+	const infoBox = hexItem.nextElementSibling;
 
-
-	if (hexItem.dataset.target === 'problem') {
-		if (!this.classList.contains('clicked')) {
-			this.classList.add('clicked');
+	if (hexItem.dataset.target === 'hexagon') {
+		if (!wrapper.classList.contains('clicked')) {
+			wrapper.classList.add('clicked');
+			hexItem.classList.add('clicked');
 			setTimeout(() => {
 				infoBox.classList.add('problem-information-active');
 				wrapper.classList.add('process-wrapper-active');
@@ -134,18 +126,19 @@ function handleProcessClick(e) {
 			}, 300);
 			setTimeout(() => {
 				infoBox.children[0].classList.add('active');
-			}, 900);
+			}, 600);
 		} else {
 			setTimeout(() => {
 				infoBox.classList.remove('problem-information-active');
 				wrapper.classList.remove('process-wrapper-active');
 				wrapper.style.backgroundColor = '#fff';
 				infoBox.children[0].classList.remove('active');
-			}, 500);
+			}, 300);
 
 			setTimeout(() => {
-				this.classList.remove('clicked');
-			}, 2500);
+				wrapper.classList.remove('clicked');
+				hexItem.classList.remove('clicked');
+			}, 400);
 
 			
 		}
@@ -153,11 +146,20 @@ function handleProcessClick(e) {
 	}
 }
 
+// Setup app
+function init() {
+	renderPortfolioItems()
+	.then(() => window.addEventListener('scroll', debounce(checkSlide)));
+
+	cycleWords(words);
+}
+
 // Event Listener
 window.addEventListener('scroll', handleScroll);
 mobileNav.addEventListener('click', openNav);
 closeButton.addEventListener('click', closeNav);
 sideNavLinks.forEach(link => link.addEventListener('click', closeNav));
-processHexagons.forEach(hexagon => hexagon.addEventListener('click', handleProcessClick));
-processWrappers.forEach(wrapper => wrapper.addEventListener('click', handleProcessClick));
+processListItems.forEach(listItem => listItem.addEventListener('click', handleProcessClick));
 
+// Initialize
+init();

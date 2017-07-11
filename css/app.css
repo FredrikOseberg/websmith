@@ -49,6 +49,7 @@ a, a:focus, a:visited, a:hover, a:active {
 	font-family: Satisfy, Roboto;
 	font-size: 4em;
 	color: #fff;
+	max-width: 50%;
 	text-align: center;
 	padding: 15px;
 	transition: all 0.5s ease;
@@ -409,6 +410,11 @@ a, a:focus, a:visited, a:hover, a:active {
 	padding-bottom: 60px;
 }
 
+.process-undertext {
+	padding-bottom: 40px;
+	font-size: 2em;
+}
+
 .process-list {
 	list-style-type: none;
 	padding-left: 0;
@@ -497,6 +503,10 @@ a, a:focus, a:visited, a:hover, a:active {
 	z-index: 999;
 }
 
+.process-wrapper .fa-times {
+	position: absolute;
+}
+
 .problem h3 {
 	z-index: 999;
 	margin-top: 10px;
@@ -521,12 +531,15 @@ a, a:focus, a:visited, a:hover, a:active {
 .process-content {
 	color: #fff;
 	padding: 25px;
+	transition: all 0.5s;
 	font-size: 1.4em;
+	opacity: 0;
 	height: 0;
 }
 
 
 .process-content.active {
+	opacity: 1;
 	height: 100%;
 }
 
@@ -972,6 +985,9 @@ a, a:focus, a:visited, a:hover, a:active {
 	}
 	.navigation li.main-nav-links {
 		display: none;
+	}
+	.main-content h1 {
+		max-width: 80%;
 	}
 }
 
