@@ -468,7 +468,7 @@ a, a:focus, a:visited, a:hover, a:active {
 	border-right: 0;
 }
 
-.problem {
+.hex {
 	background-color: #cc243b;
 	display: flex;
 	max-height: 100%;
@@ -478,27 +478,16 @@ a, a:focus, a:visited, a:hover, a:active {
 	text-align: center;
 	transition: all 0.3s ease;
 	color: #fff;
-	padding: 20px;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius:3px;
 }
 
-.design {
-	background-color: #cc243b;
-	max-height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
-	transition: all 0.3s ease;
-	color: #fff;
-	padding: 20px;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius:3px;
+.process-heading {
+	margin: 20px;
 }
 
 .process-wrapper .fa {
+	margin-top: 40px;
 	font-size: 3em;
 	z-index: 999;
 }
@@ -549,6 +538,7 @@ a, a:focus, a:visited, a:hover, a:active {
 
 .problem-information {
 	display: flex;
+	margin-top: 20px;
 	opacity: 0;
 	height: 0;
 	width: 0%;
@@ -953,7 +943,6 @@ a, a:focus, a:visited, a:hover, a:active {
 		flex-direction: column;
 		align-items: center;
 	}
-
 	.process-content {
 		padding: 0 30px 30px 30px;
 		text-align: center;

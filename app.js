@@ -14,6 +14,16 @@ const sideNavLinks = document.querySelectorAll('.sidenav a');
 const closeButton = document.querySelector('.closebtn');
 const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
 
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (isSafari) {
+	const hexInfoParagraphs = document.querySelectorAll('.problem-information') 
+
+	hexInfoParagraphs.forEach(function addClass(paragraph) {
+		paragraph.classList.add('problem-information-safari');
+	});
+}
+
 /* Set the width of the side navigation to 250px */
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
