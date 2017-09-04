@@ -111,9 +111,6 @@ function checkSlide(e) {
 
 // Event Handlers
 function handleScroll(e) {
-	const navLinks = document.querySelectorAll('.main-nav-links');
-	const scrollingButton = document.querySelector('.scrolling-nav-link');
-
 	if (window.pageYOffset >= 80) {
 		mainNavigation.classList.add('scrolling');
 	} else {
