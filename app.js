@@ -68,7 +68,6 @@ function renderPortfolioItems() {
 
 function checkSlide(e) {
 	if (window.pageYOffset >= 1500) return;
-	console.log(window);
  	const sliderImages = convertNodeList(document.querySelectorAll('.slide-in'));
 	sliderImages.forEach(sliderImage => {
 		const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
