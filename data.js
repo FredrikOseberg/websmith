@@ -6,7 +6,7 @@ module.exports = [
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-		img: 'img/portfolio/avidyx.png',
+		img: 'img/portfolio/thumbnail000.png',
 		url: 'http://www.adrenalineadvisor.com'
 	},
 	{
@@ -16,7 +16,7 @@ module.exports = [
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-		img: 'img/portfolio/weatherapp.png',
+		img: 'img/portfolio/thumbnail004.png',
 		url: 'https://codepen.io/khare/full/vmaVqV/'
 	},
 	{
@@ -26,7 +26,7 @@ module.exports = [
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-		img: 'img/portfolio/wikipedia.png',
+		img: 'img/portfolio/historyFeature.png',
 		url: 'https://codepen.io/khare/full/yXzzxg/'
 	},
 	{
@@ -36,7 +36,7 @@ module.exports = [
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-		img: 'img/portfolio/twitch.png',
+		img: 'img/portfolio/thumbnail003.png',
 		url: 'https://codepen.io/khare/full/YQvXdq/'
 	},
 ]
