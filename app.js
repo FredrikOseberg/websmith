@@ -14,16 +14,6 @@ const sideNavLinks = document.querySelectorAll('.sidenav a');
 const closeButton = document.querySelector('.closebtn');
 const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
 
-var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-if (isSafari) {
-	const hexInfoParagraphs = document.querySelectorAll('.problem-information') 
-
-	hexInfoParagraphs.forEach(function addClass(paragraph) {
-		paragraph.classList.add('problem-information-safari');
-	});
-}
-
 /* Set the width of the side navigation to 250px */
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
@@ -46,22 +36,6 @@ function cycleWords(words) {
 			clearInterval(intervalId);
 		}
 	}
-}
-
-
-function debounce(func, wait = 20, immediate = true) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
 }
 
 function renderPortfolioItems() {
@@ -90,27 +64,27 @@ function renderPortfolioItems() {
 }
 
 function checkSlide(e) {
-	const sliderImages = document.querySelectorAll('.slide-in');
-
+	if (window.pageYOffset >= 1500) return;
+	console.log(window);
+ 	const sliderImages = document.querySelectorAll('.slide-in');
 	sliderImages.forEach(sliderImage => {
-		setTimeout(() => {
+		const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+		const isHalfShown = slideInAt > sliderImage.offsetTop;
+		requestAnimationFrame(() => {
 			// Halfway through image
-			const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-			const isHalfShown = slideInAt > sliderImage.offsetTop;
-
 			if (isHalfShown) {
 				sliderImage.classList.add('slide-in-active');
 				setTimeout(() => {
 					sliderImage.parentNode.classList.add('portfolio-item-active');
 				}, 800)
 			}
-		}, 400);
+		});
 
 	});
 }
 
 // Event Handlers
-function handleScroll(e) {
+function handleScroll() {
 	if (window.pageYOffset >= 80) {
 		mainNavigation.classList.add('scrolling');
 	} else {
@@ -131,6 +105,7 @@ function handleProcessClick(e) {
 			setTimeout(() => {
 				infoBox.classList.add('problem-information-active');
 				wrapper.classList.add('process-wrapper-active');
+				hexItem.classList.remove('process-item-shadow');
 				wrapper.style.backgroundColor = '#cc243b';
 			}, 300);
 			setTimeout(() => {
@@ -149,18 +124,16 @@ function handleProcessClick(e) {
 			setTimeout(() => {
 				wrapper.classList.remove('clicked');
 				hexItem.classList.remove('clicked');
+				hexItem.classList.add('process-item-shadow');
 			}, 400);
-
-			
 		}
-
 	}
 }
 
 // Setup application
 function init() {
 	renderPortfolioItems()
-	.then(() => window.addEventListener('scroll', debounce(checkSlide)));
+	.then(() => window.addEventListener('scroll', checkSlide));
 
      cycleWords(words);
 }
