@@ -6,11 +6,10 @@ import data from './data.js';
 const portfolio = document.querySelector('#inner-portfolio');
 const wordsSpan = document.querySelector('#word');
 const mainNavigation = document.querySelector('.websmith-navbar');
-const processHexagons = document.querySelectorAll('.hexagon');
-const processWrappers = document.querySelectorAll('.process-wrapper');
+const processWrappers = convertNodeList(document.querySelectorAll('.process-wrapper'));
 const mobileNav = document.querySelector('.mobile-navigation');
-const processListItems = document.querySelectorAll('.process-list-item');
-const sideNavLinks = document.querySelectorAll('.sidenav a');
+const processListItems = convertNodeList(document.querySelectorAll('.process-list-item'));
+const sideNavLinks = convertNodeList(document.querySelectorAll('.sidenav a'));
 const closeButton = document.querySelector('.closebtn');
 const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
 
@@ -22,6 +21,10 @@ function openNav() {
 /* Set the width of the side navigation to 0 */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+}
+
+function convertNodeList(node) {
+	return Array.prototype.slice.call(node);
 }
 
 function cycleWords(words) {
@@ -66,7 +69,7 @@ function renderPortfolioItems() {
 function checkSlide(e) {
 	if (window.pageYOffset >= 1500) return;
 	console.log(window);
- 	const sliderImages = document.querySelectorAll('.slide-in');
+ 	const sliderImages = convertNodeList(document.querySelectorAll('.slide-in'));
 	sliderImages.forEach(sliderImage => {
 		const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
 		const isHalfShown = slideInAt > sliderImage.offsetTop;

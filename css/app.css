@@ -426,6 +426,7 @@ a, a:focus, a:visited, a:hover, a:active {
 .process-list li {
 	width: 80%;
 	margin: 20px;
+	position: relative;
 }
 
 .process-item {
@@ -439,13 +440,13 @@ a, a:focus, a:visited, a:hover, a:active {
 	align-items: center;
 	flex-direction: column;
 	cursor: pointer;
-	position: relative;
+	margin-bottom: 50px;
 }
 
 .process-link {
 	position: absolute;
 	background-color: #cc243b;
-	height: 100px;
+	height: 250px;
 	width: 4px;
 	transform: translateY(-50px);
 }
@@ -898,9 +899,6 @@ a, a:focus, a:visited, a:hover, a:active {
 		top: -60px;
 		left: 5px;
 		position: inherit;
-	}
-	.process-item {
-		margin-bottom: 50px;
 	}
 }
 
