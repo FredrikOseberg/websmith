@@ -449,7 +449,6 @@ a, a:focus, a:visited, a:hover, a:active {
 	height: 250px;
 	width: 4px;
 	transform: translateY(-50px);
-	z-index: -1;
 }
 
 .process-item-shadow {
