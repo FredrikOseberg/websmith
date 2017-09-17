@@ -1,6 +1,5 @@
-"use strict";
+'use strict';
 
-import './css/app.css';
 import data from './data.js';
 
 const portfolio = document.querySelector('#inner-portfolio');
@@ -11,16 +10,23 @@ const mobileNav = document.querySelector('.mobile-navigation');
 const processListItems = convertNodeList(document.querySelectorAll('.process-list-item'));
 const sideNavLinks = convertNodeList(document.querySelectorAll('.sidenav a'));
 const closeButton = document.querySelector('.closebtn');
-const words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
+const words = [
+	'elegance',
+	'simplicity',
+	'art',
+	'users first',
+	'creating your channel',
+	'getting your competitive advantage'
+];
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+	document.getElementById('mySidenav').style.width = '100%';
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+	document.getElementById('mySidenav').style.width = '0';
 }
 
 function convertNodeList(node) {
@@ -43,9 +49,10 @@ function cycleWords(words) {
 
 function renderPortfolioItems() {
 	return new Promise(resolve => {
-		const portfolioItems = data.map((item, index) => {
-		const featured = index === 2 ? 'featured' : ''
-		return `
+		const portfolioItems = data
+			.map((item, index) => {
+				const featured = index === 2 ? 'featured' : '';
+				return `
 			<div class="col-md-6 col-sm-6 ${featured}">
 				<a href="${item.url}" target="_blank">
 					<div class="portfolio-item">
@@ -58,8 +65,9 @@ function renderPortfolioItems() {
 						</div>
 					</div>
 				</a>
-			</div>`
-		}).join("");
+			</div>`;
+			})
+			.join('');
 
 		portfolio.innerHTML = portfolioItems;
 		resolve();
@@ -68,9 +76,9 @@ function renderPortfolioItems() {
 
 function checkSlide(e) {
 	if (window.pageYOffset >= 1500) return;
- 	const sliderImages = convertNodeList(document.querySelectorAll('.slide-in'));
+	const sliderImages = convertNodeList(document.querySelectorAll('.slide-in'));
 	sliderImages.forEach(sliderImage => {
-		const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+		const slideInAt = window.scrollY + window.innerHeight - sliderImage.height / 2;
 		const isHalfShown = slideInAt > sliderImage.offsetTop;
 		requestAnimationFrame(() => {
 			// Halfway through image
@@ -78,10 +86,9 @@ function checkSlide(e) {
 				sliderImage.classList.add('slide-in-active');
 				setTimeout(() => {
 					sliderImage.parentNode.classList.add('portfolio-item-active');
-				}, 800)
+				}, 800);
 			}
 		});
-
 	});
 }
 
@@ -134,10 +141,9 @@ function handleProcessClick(e) {
 
 // Setup application
 function init() {
-	renderPortfolioItems()
-	.then(() => window.addEventListener('scroll', checkSlide));
+	renderPortfolioItems().then(() => window.addEventListener('scroll', checkSlide));
 
-     cycleWords(words);
+	cycleWords(words);
 }
 
 // Event Listener
