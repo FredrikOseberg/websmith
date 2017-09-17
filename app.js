@@ -1,5 +1,6 @@
 'use strict';
 
+import './css/app.css';
 import data from './data.js';
 
 const portfolio = document.querySelector('#inner-portfolio');
