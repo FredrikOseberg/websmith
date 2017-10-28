@@ -52,8 +52,22 @@ module.exports = {
 							  not only being active in the coding process but in the creating of the product.`,
 	    aboutMeSixthContent: `If you are looking for someone who is passionate, 
 	    					  enthusiastic and cares deeply about technology and entrepreneurship, 
-	    					  you should get in touch with me.
-
-`
+	    					  you should get in touch with me.`,
+	  	aboutMeSeventhContent: `In my spare time I love to surf, scuba dive, read, snowboard, 
+	  							work out and play beach volleyball in the sun. I also like cats and dogs. 
+	  							But I'm leaning more towards dogs, if that matters to you.`,
+		contactMeButton: 'Contact',
+		manifestoHeader: 'My manifesto',
+		manifestoSubHeader: 'Pay for product, not for process.',
+		manifestoContent: `Tech is risky. It's expensive. Most of the time you don't understand what is being done or what you are paying for. 
+						   I get it. I've been there. My first startup had a tough time because I didn't know how to deal with the facts that I stated above. 
+				   		   In fact that is why I started to learn coding. The core of my manifesto is that you should pay for the product, not the process.`,
+	    designManifestoHeader: 'Design Manifesto',
+	    designManifestoContent: 'Simplistic. User-driven. Material. Responsive.',
+	    codingManifestoHeader: 'Coding Manifesto',
+	    codingManifestoContent: 'Clean. Modular. Modern. Robust.',
+	    productManifestoHeader: 'Product Manifesto',
+	    productManifestoContent: 'Launch. Gather data. Analyze. Improve.',
+	     
 
 }
