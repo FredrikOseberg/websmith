@@ -1,1 +1,853 @@
-!function(t){function e(o){if(i[o])return i[o].exports;var n=i[o]={i:o,l:!1,exports:{}};return t[o].call(n.exports,n,n.exports,e),n.l=!0,n.exports}var i={};e.m=t,e.c=i,e.d=function(t,i,o){e.o(t,i)||Object.defineProperty(t,i,{configurable:!1,enumerable:!0,get:o})},e.n=function(t){var i=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(i,"a",i),i},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="/",e(e.s=0)}([function(t,e,i){"use strict";function o(){document.getElementById("mySidenav").style.width="100%"}function n(){document.getElementById("mySidenav").style.width="0"}function r(t){return Array.prototype.slice.call(t)}function a(t){function e(){i++,m.textContent=t[i],i>=t.length&&(m.textContent=t[t.length-1],clearInterval(o))}var i=0;m.textContent=t[0];var o=setInterval(e,2e3)}function s(){return new Promise(function(t){var e=u.default.map(function(t,e){return'\n\t\t\t<div class="col-md-6 col-sm-6 '+(2===e?"featured":"")+'">\n\t\t\t\t<a href="'+t.url+'" target="_blank">\n\t\t\t\t\t<div class="portfolio-item">\n\t\t\t\t\t\t<img src="'+t.img+'" class="portfolio-image slide-in">\n\t\t\t\t\t\t<div class="portfolio-image-overlay">\n\t\t\t\t\t\t\t<div class="portfolio-image-overlay-content">\n\t\t\t\t\t\t\t\t<h3>'+t.name+'</h3>\n\t\t\t\t\t\t\t\t<button class="portfolio-button">Explore</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</div>'}).join("");f.innerHTML=e,t()})}function l(t){if(!(window.pageYOffset>=1500)){r(document.querySelectorAll(".slide-in")).forEach(function(t){var e=window.scrollY+window.innerHeight-t.height/2,i=e>t.offsetTop;requestAnimationFrame(function(){i&&(t.classList.add("slide-in-active"),setTimeout(function(){t.parentNode.classList.add("portfolio-item-active")},800))})})}}function c(){window.pageYOffset>=80?g.classList.add("scrolling"):g.classList.remove("scrolling")}function p(t){var e=this.querySelector('div[data-target="hexagon"]'),i=e.parentNode,o=e.nextElementSibling,n=o.children[0];"hexagon"===e.dataset.target&&(i.classList.contains("clicked")?(setTimeout(function(){o.classList.remove("problem-information-active"),i.classList.remove("process-wrapper-active"),i.style.backgroundColor="#fff",n.classList.remove("show"),n.classList.remove("active")},300),setTimeout(function(){i.classList.remove("clicked"),e.classList.remove("clicked"),e.classList.add("process-item-shadow")},400)):(i.classList.add("clicked"),e.classList.add("clicked"),setTimeout(function(){o.classList.add("problem-information-active"),i.classList.add("process-wrapper-active"),e.classList.remove("process-item-shadow"),i.style.backgroundColor="#cc243b"},300),setTimeout(function(){n.classList.add("show")},600),setTimeout(function(){return n.classList.add("active")},600)))}i(1);var d=i(6),u=function(t){return t&&t.__esModule?t:{default:t}}(d),f=document.querySelector("#inner-portfolio"),m=document.querySelector("#word"),g=document.querySelector(".websmith-navbar"),x=(r(document.querySelectorAll(".process-wrapper")),document.querySelector(".mobile-navigation")),h=r(document.querySelectorAll(".process-list-item")),b=r(document.querySelectorAll(".sidenav a")),v=document.querySelector(".closebtn"),y=["elegance","simplicity","art","users first","creating your channel","getting your competitive advantage"];window.addEventListener("scroll",c),x.addEventListener("click",o),v.addEventListener("click",n),b.forEach(function(t){return t.addEventListener("click",n)}),h.forEach(function(t){return t.addEventListener("click",p)}),function(){s().then(function(){return window.addEventListener("scroll",l)}),a(y)}()},function(t,e,i){var o=i(2);"string"==typeof o&&(o=[[t.i,o,""]]);var n={};n.transform=void 0;i(4)(o,n);o.locals&&(t.exports=o.locals)},function(t,e,i){e=t.exports=i(3)(void 0),e.push([t.i,"h1,h2,h3,h4,h5,h6{font-family:Satisfy,Open sans}p{color:#4e4e4e;font-size:1.2em}body,p{font-family:Roboto,sans-serif}body{padding-top:80px}html{margin:0;padding:0}a,a:active,a:focus,a:hover,a:visited{text-decoration:none;color:inherit}.text-header{text-align:center;padding:60px;font-size:3.5em;color:#444343;font-weight:700}.main-content{height:500px;background:#004e92;display:flex;justify-content:center;align-items:center}.main-content h1{font-family:Satisfy,Roboto;font-size:4em;color:#fff;max-width:50%;text-align:center;padding:15px;transition:all .5s ease}#word{color:#f56815}.sidenav{height:100%;width:0;position:fixed;z-index:1000;top:0;left:0;background-color:#fff;overflow-x:hidden;padding-top:60px;transition:.5s;display:flex;flex-direction:column;align-items:center}.sidenav a{padding:8px;text-decoration:none;font-size:20px;color:#444;display:block;transition:.3s}.offcanvas a:focus,.sidenav a:hover{color:#696969}.sidenav .closebtn{position:absolute;top:0;right:25px;font-size:36px;margin-left:50px}.websmith-navbar{display:flex;justify-content:center;position:fixed;top:0;z-index:1000;background-color:#fff;width:100%}.navbar-content{display:flex;align-items:center;width:90%;position:relative}.navigation{list-style-type:none;display:flex;justify-content:flex-end;width:100%;margin-bottom:0;margin-left:auto}.navigation li{padding:10px 20px;position:relative;display:flex;justify-content:center;border:1px solid #004e92;margin:5px;transition:all .5s;color:#004e92;font-family:Roboto;font-size:1.1em;border-radius:3px}.navigation li.mobile-navigation{display:none;cursor:pointer}.navigation li:hover{background-color:#004e92;color:#fff}.logo{font-family:Satisfy;color:#004e92;font-weight:700}.scrolling{box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}#portfolio{padding-bottom:100px}.portfolio-item{position:relative;display:block;margin:10px;transition:all 1s ease-in-out}.portfolio-item-active{box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}.slide-in{opacity:0;transform:translateX(-100%) scale(.95);transition:all 1s ease-in-out}.slide-in-active{opacity:1;transform:translateX(0) scale(1)}.portfolio-image{width:100%;display:block;height:240px}.portfolio-image-overlay{position:absolute;top:0;bottom:0;left:0;right:0;height:100%;width:100%;opacity:0;transition:.5s ease;background:#141e30;background:-webkit-linear-gradient(90deg,#243b55,#141e30);background:linear-gradient(90deg,#243b55,#141e30)}.portfolio-image-overlay-content{color:#fff;font-size:20px;width:100%;position:absolute;text-align:center;top:45%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}.portfolio-image-overlay-content h3{padding:20px}.portfolio-item:hover .portfolio-image-overlay{opacity:.9;cursor:pointer}.portfolio-button{border:none;color:#fff;background-color:#141e30;border:2px solid #fff;padding:10px 20px;border-radius:3px;cursor:pointer}.portfolio-button:hover{cursor:pointer}.featured{width:100%}.featured .portfolio-image{width:100%;height:auto}.portfolio-button:focus{outline:none}.special-offer{margin:80px auto 0;width:60%;max-width:500px;border:3px solid #004e92;border-radius:3px;padding:30px;text-align:center}.special-offer h3{padding:10px 0 20px;font-size:2.8em;color:#444343}.special-offer p{line-height:1.6}.special-offer .fa-handshake-o{font-size:4em;color:#004e92}.special-offer-button{border:none;background-color:#f56815;padding:15px 40px;width:250px;text-align:center;margin:25px auto}.bttn{border-radius:3px;font-family:Satisfy;color:#fff;font-size:1.5em;box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);transition:all .3s ease}.bttn:hover{box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}#social-media{padding:100px 0;text-align:center;background-color:#004e92}#social-media .fa{color:#fff;font-size:5em;padding:30px 20px}#social-media .fa:hover{color:#002e56;transition:.5s ease}#contact-me{padding-bottom:60px}#contact-me label{padding:5px}.contact-text-input{width:100%;padding:8px;border:none;border-radius:7px;background:#ededed;transition:all .5s ease;border-bottom:2px solid #ededed}.contact-text-input:focus{border-bottom:2px solid #f56815;transition:.5s ease;outline:none}.contact-textarea{width:100%;padding:8px;border:none;transition:all .5s ease;border-radius:7px;background:#ededed;border-bottom:2px solid #ededed}.contact-textarea:focus{border-bottom:2px solid #f56815;transition:.5s ease;outline:none}.contact-button{font-family:Satisfy;display:block;margin:0 auto;color:#fff;border-radius:3px;background-color:#f56815;border:none;padding:15px;width:100%;font-size:1.4em;cursor:pointer}.contact-button .fa{margin-right:5px}.contact-details{display:flex;justify-content:center}.contact-details ul{list-style-type:none;font-size:1.2em}.contact-details ul li{padding:10px 0}.contact-details ul li .fa-mobile{font-size:1.5em;margin-right:5px}.contact-details ul li .fa-envelope{margin-right:3px}.contact-details ul li .fa{color:#cc243b}.process{text-align:center;padding-bottom:60px}.process-undertext{padding-bottom:40px;font-size:2em}.process-list{list-style-type:none;padding-left:0;display:flex;flex-direction:column;align-items:center}.process-list li{width:80%;margin:20px;position:relative}.process-item{background-color:#cc243b;border-radius:100%;height:200px;width:200px;color:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;cursor:pointer;margin-bottom:50px}.process-link{position:absolute;background-color:#cc243b;height:250px;width:4px;transform:translateY(-50px)}.process-item-shadow{box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}.process-heading{margin:20px}.process-wrapper .fa{margin-top:40px;font-size:3em;z-index:999}.process-wrapper .fa-times{position:absolute}.problem h3{z-index:999;margin-top:10px}.process-wrapper{display:flex;flex-direction:row;justify-content:center;transition:all .5s ease;max-width:750px;margin:0 auto}.process-wrapper-active{box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);width:100%;display:flex;justify-content:center;align-items:center}.process-content{color:#fff;padding:25px;transition:all .5s;opacity:0;height:0;display:none}.process-content.show{display:block}.process-content.active{opacity:1;height:100%}.problem-information{display:flex;margin-top:20px;opacity:0;height:0;width:0;transition:all 1s ease}.problem-information-active{display:block;opacity:1;width:100%;height:100%}#learning-projects{background-color:#004e92;padding-bottom:60px}.learning-header{color:#fff}.learning-box{background-color:#fff;padding:20px;width:100%;margin:0 auto 60px;border-radius:3px;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}.learning-box p{line-height:1.7;text-align:center;margin:25px}.learning-box h2{text-align:center;padding:10px}.learning-box .fa-book{font-size:4em;color:#004e92;text-align:center;display:block;padding:20px}.learning-project-details{color:#fff;display:flex;flex-direction:column;align-items:center}.learning-tech-wrapper{border:2px solid #fff;margin-top:20px;padding:20px}.learning-tech-wrapper ul{padding-left:0}.learning-project-details-header{margin-bottom:20px}.learning-tech-header{margin:30px 0;text-align:center}.learning-list,.learning-list-tech{list-style-type:none}.learning-list-tech{display:flex;justify-content:space-around}.learning-list-tech li,.learning-list li{display:flex;align-items:center;font-family:Roboto,sans-serif;padding:5px;font-size:1.1em}.learning-list li .fa{margin-right:8px;font-size:1.8em}.tech-logo{width:80px;height:80px;background-color:#fff;border-radius:100%;display:flex;justify-content:center;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);transition:all .3s ease}.tech-logo:hover{box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)}.tech-logo img{width:60px;height:60px}.learning-project-button{display:block;margin:40px auto;background-color:#f56815;border:none;padding:20px 40px;text-align:center;width:200px}#about-me{padding-bottom:100px}#about-me img{border-radius:3px;box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)}#about-me p{line-height:1.5;padding:5px}#about-me a{color:#f56815}.about-image-primary{position:relative;width:100%}.about-image-secondary{position:absolute;height:200px;width:150px;top:-20px;left:-10px}.about-me-bttn{margin-top:50px}#manifesto{background-color:#004e92;color:#fff;text-align:center;padding-bottom:100px}#manifesto p{padding:20px;color:#fff;max-width:400px;margin:0 auto;line-height:1.6}#manifesto .fa{font-size:3.5em}.manifesto-header{color:#fff}.manifesto-wrapper{margin-top:40px}.manifesto-coding,.manifesto-design,.manifesto-product{border:1px solid #fff;border-radius:3px;padding:20px;margin:40px 0}.manifesto-product{margin:0}#inspiration{padding-bottom:60px}.inspiration-card{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background-color:#cc243b;color:#fff;border-radius:3px;padding:20px;margin:20px 0;height:300px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.inspiration-card h3{line-height:1.5}.inspiration-card p{color:#fff;padding-top:10px;font-size:1.1em}#founder-offer{background-color:#004e92;padding-bottom:60px}.learning-box .fa-lightbulb-o{font-size:4em;color:#004e92;text-align:center;display:block;padding:20px}.founder-offer-header{color:#fff}.founder-offer-requirements{display:flex;flex-direction:column;align-items:center}.founder-offer-requirements h2,.number{color:#fff}.number{background-color:#f56815;display:inline;padding:5px 10px;border-radius:100%;margin-right:8px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.founder-offer-requirements ul{list-style-type:none;padding-left:0}.founder-offer-requirements ul li{margin:15px;color:#fff;font-size:1.1em}.founder-offer-details{margin-top:25px;border:1px solid #fff;width:100%;display:flex;flex-direction:column;align-items:center;padding:20px}.founder-offer-details ul li{margin:0}#websmith-footer{background-color:#004e92;padding:20px;margin:0;display:flex;justify-content:center;align-items:center}.footer-contact{margin-left:auto;list-style-type:none;display:flex;margin-bottom:0}.footer-contact li{color:#fff;padding:10px;font-size:1.1em}.footer-contact li .fa{margin-right:5px;font-size:1.2em}.footer-contact li:last-child{padding-bottom:0}.footer-logo{padding:0;margin:0;color:#fff}@media (min-width:1200px){.portfolio-image{height:300px}}@media (max-width:991px){.portfolio-image{height:200px;margin-bottom:40px}#about-me img{display:block;margin:0 auto}.about-image-primary{width:50%}#about-me{text-align:center}#about-me p{width:60%;margin:15px auto}.inspiration-card{margin-top:40px}.about-image-secondary{display:block;height:185px;width:140px;top:-60px;left:5px;position:inherit}}@media (max-width:768px){.portfolio-image{height:auto;margin-bottom:40px}.special-offer{width:95%}.process-wrapper{flex-direction:column;align-items:center}.process-content{padding:0 30px 30px;text-align:center}.about-image-primary{width:90%}#about-me{text-align:center}#websmith-footer{flex-direction:column;align-items:center}#about-me p{width:100%;margin:15px auto}.footer-contact{padding:25px;flex-direction:column;align-items:center;margin-left:0}.footer-contact li{padding:10px}.navigation li.mobile-navigation{display:block;border:none;font-size:2em}.navigation li.main-nav-links{display:none}.main-content h1{max-width:80%}.process-item{margin-bottom:0}}@media screen and (max-height:450px){.sidenav{padding-top:15px}.sidenav a{font-size:18px}}",""])},function(t,e){function i(t,e){var i=t[1]||"",n=t[3];if(!n)return i;if(e&&"function"==typeof btoa){var r=o(n);return[i].concat(n.sources.map(function(t){return"/*# sourceURL="+n.sourceRoot+t+" */"})).concat([r]).join("\n")}return[i].join("\n")}function o(t){return"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(t))))+" */"}t.exports=function(t){var e=[];return e.toString=function(){return this.map(function(e){var o=i(e,t);return e[2]?"@media "+e[2]+"{"+o+"}":o}).join("")},e.i=function(t,i){"string"==typeof t&&(t=[[null,t,""]]);for(var o={},n=0;n<this.length;n++){var r=this[n][0];"number"==typeof r&&(o[r]=!0)}for(n=0;n<t.length;n++){var a=t[n];"number"==typeof a[0]&&o[a[0]]||(i&&!a[2]?a[2]=i:i&&(a[2]="("+a[2]+") and ("+i+")"),e.push(a))}},e}},function(t,e,i){function o(t,e){for(var i=0;i<t.length;i++){var o=t[i],n=m[o.id];if(n){n.refs++;for(var r=0;r<n.parts.length;r++)n.parts[r](o.parts[r]);for(;r<o.parts.length;r++)n.parts.push(p(o.parts[r],e))}else{for(var a=[],r=0;r<o.parts.length;r++)a.push(p(o.parts[r],e));m[o.id]={id:o.id,refs:1,parts:a}}}}function n(t,e){for(var i=[],o={},n=0;n<t.length;n++){var r=t[n],a=e.base?r[0]+e.base:r[0],s=r[1],l=r[2],c=r[3],p={css:s,media:l,sourceMap:c};o[a]?o[a].parts.push(p):i.push(o[a]={id:a,parts:[p]})}return i}function r(t,e){var i=x(t.insertInto);if(!i)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var o=v[v.length-1];if("top"===t.insertAt)o?o.nextSibling?i.insertBefore(e,o.nextSibling):i.appendChild(e):i.insertBefore(e,i.firstChild),v.push(e);else{if("bottom"!==t.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");i.appendChild(e)}}function a(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t);var e=v.indexOf(t);e>=0&&v.splice(e,1)}function s(t){var e=document.createElement("style");return t.attrs.type="text/css",c(e,t.attrs),r(t,e),e}function l(t){var e=document.createElement("link");return t.attrs.type="text/css",t.attrs.rel="stylesheet",c(e,t.attrs),r(t,e),e}function c(t,e){Object.keys(e).forEach(function(i){t.setAttribute(i,e[i])})}function p(t,e){var i,o,n,r;if(e.transform&&t.css){if(!(r=e.transform(t.css)))return function(){};t.css=r}if(e.singleton){var c=b++;i=h||(h=s(e)),o=d.bind(null,i,c,!1),n=d.bind(null,i,c,!0)}else t.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(i=l(e),o=f.bind(null,i,e),n=function(){a(i),i.href&&URL.revokeObjectURL(i.href)}):(i=s(e),o=u.bind(null,i),n=function(){a(i)});return o(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;o(t=e)}else n()}}function d(t,e,i,o){var n=i?"":o.css;if(t.styleSheet)t.styleSheet.cssText=w(e,n);else{var r=document.createTextNode(n),a=t.childNodes;a[e]&&t.removeChild(a[e]),a.length?t.insertBefore(r,a[e]):t.appendChild(r)}}function u(t,e){var i=e.css,o=e.media;if(o&&t.setAttribute("media",o),t.styleSheet)t.styleSheet.cssText=i;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(i))}}function f(t,e,i){var o=i.css,n=i.sourceMap,r=void 0===e.convertToAbsoluteUrls&&n;(e.convertToAbsoluteUrls||r)&&(o=y(o)),n&&(o+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(n))))+" */");var a=new Blob([o],{type:"text/css"}),s=t.href;t.href=URL.createObjectURL(a),s&&URL.revokeObjectURL(s)}var m={},g=function(t){var e;return function(){return void 0===e&&(e=t.apply(this,arguments)),e}}(function(){return window&&document&&document.all&&!window.atob}),x=function(t){var e={};return function(i){return void 0===e[i]&&(e[i]=t.call(this,i)),e[i]}}(function(t){return document.querySelector(t)}),h=null,b=0,v=[],y=i(5);t.exports=function(t,e){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");e=e||{},e.attrs="object"==typeof e.attrs?e.attrs:{},e.singleton||(e.singleton=g()),e.insertInto||(e.insertInto="head"),e.insertAt||(e.insertAt="bottom");var i=n(t,e);return o(i,e),function(t){for(var r=[],a=0;a<i.length;a++){var s=i[a],l=m[s.id];l.refs--,r.push(l)}if(t){o(n(t,e),e)}for(var a=0;a<r.length;a++){var l=r[a];if(0===l.refs){for(var c=0;c<l.parts.length;c++)l.parts[c]();delete m[l.id]}}}};var w=function(){var t=[];return function(e,i){return t[e]=i,t.filter(Boolean).join("\n")}}()},function(t,e){t.exports=function(t){var e="undefined"!=typeof window&&window.location;if(!e)throw new Error("fixUrls requires window.location");if(!t||"string"!=typeof t)return t;var i=e.protocol+"//"+e.host,o=i+e.pathname.replace(/\/[^\/]*$/,"/");return t.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,function(t,e){var n=e.trim().replace(/^"(.*)"$/,function(t,e){return e}).replace(/^'(.*)'$/,function(t,e){return e});if(/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(n))return t;var r;return r=0===n.indexOf("//")?n:0===n.indexOf("/")?i+n:o+n.replace(/^\.\//,""),"url("+JSON.stringify(r)+")"})}},function(t,e,i){"use strict";t.exports=[{name:"Adrenaline Advisor",description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \t\t\t\t\tAenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \t\t\t\t\tgravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \t\t\t\t\tullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \t\t\t\t\tquis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.",img:"img/portfolio/thumbnail000.png",url:"http://www.adrenalineadvisor.com"},{name:"Weather App",description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \t\t\t\t\tAenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \t\t\t\t\tgravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \t\t\t\t\tullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \t\t\t\t\tquis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.",img:"img/portfolio/thumbnail004.png",url:"https://codepen.io/khare/full/vmaVqV/"},{name:"Wikipedia Viewer",description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \t\t\t\t\tAenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \t\t\t\t\tgravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \t\t\t\t\tullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \t\t\t\t\tquis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.",img:"img/portfolio/historyFeature.png",url:"https://codepen.io/khare/full/yXzzxg/"},{name:"Twitch JSON API",description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \t\t\t\t\tAenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \t\t\t\t\tgravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \t\t\t\t\tullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \t\t\t\t\tquis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.",img:"img/portfolio/thumbnail003.png",url:"https://codepen.io/khare/full/YQvXdq/"}]}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(1);
+
+var _data = __webpack_require__(6);
+
+var _data2 = _interopRequireDefault(_data);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var portfolio = document.querySelector('#inner-portfolio');
+var wordsSpan = document.querySelector('#word');
+var mainNavigation = document.querySelector('.websmith-navbar');
+var processWrappers = convertNodeList(document.querySelectorAll('.process-wrapper'));
+var mobileNav = document.querySelector('.mobile-navigation');
+var processListItems = convertNodeList(document.querySelectorAll('.process-list-item'));
+var sideNavLinks = convertNodeList(document.querySelectorAll('.sidenav a'));
+var closeButton = document.querySelector('.closebtn');
+var words = ['elegance', 'simplicity', 'art', 'users first', 'creating your channel', 'getting your competitive advantage'];
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+	document.getElementById('mySidenav').style.width = '100%';
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+	document.getElementById('mySidenav').style.width = '0';
+}
+
+function convertNodeList(node) {
+	return Array.prototype.slice.call(node);
+}
+
+function cycleWords(words) {
+	var counter = 0;
+	wordsSpan.textContent = words[0];
+	var intervalId = setInterval(changeWord, 2000);
+	function changeWord() {
+		counter++;
+		wordsSpan.textContent = words[counter];
+		if (counter >= words.length) {
+			wordsSpan.textContent = words[words.length - 1];
+			clearInterval(intervalId);
+		}
+	}
+}
+
+function renderPortfolioItems() {
+	return new Promise(function (resolve) {
+		var portfolioItems = _data2.default.map(function (item, index) {
+			var featured = index === 2 ? 'featured' : '';
+			return '\n\t\t\t<div class="col-md-6 col-sm-6 ' + featured + '">\n\t\t\t\t<a href="' + item.url + '" target="_blank">\n\t\t\t\t\t<div class="portfolio-item">\n\t\t\t\t\t\t<img src="' + item.img + '" class="portfolio-image slide-in">\n\t\t\t\t\t\t<div class="portfolio-image-overlay">\n\t\t\t\t\t\t\t<div class="portfolio-image-overlay-content">\n\t\t\t\t\t\t\t\t<h3>' + item.name + '</h3>\n\t\t\t\t\t\t\t\t<button class="portfolio-button">Explore</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</a>\n\t\t\t</div>';
+		}).join('');
+
+		portfolio.innerHTML = portfolioItems;
+		resolve();
+	});
+}
+
+function checkSlide(e) {
+	if (window.pageYOffset >= 1500) return;
+	var sliderImages = convertNodeList(document.querySelectorAll('.slide-in'));
+	sliderImages.forEach(function (sliderImage) {
+		var slideInAt = window.scrollY + window.innerHeight - sliderImage.height / 2;
+		var isHalfShown = slideInAt > sliderImage.offsetTop;
+		requestAnimationFrame(function () {
+			// Halfway through image
+			if (isHalfShown) {
+				sliderImage.classList.add('slide-in-active');
+				setTimeout(function () {
+					sliderImage.parentNode.classList.add('portfolio-item-active');
+				}, 800);
+			}
+		});
+	});
+}
+
+// Event Handlers
+function handleScroll() {
+	if (window.pageYOffset >= 80) {
+		mainNavigation.classList.add('scrolling');
+	} else {
+		mainNavigation.classList.remove('scrolling');
+	}
+}
+
+function handleProcessClick(e) {
+	var hexItem = this.querySelector('div[data-target="hexagon"]');
+	var wrapper = hexItem.parentNode;
+	var infoBox = hexItem.nextElementSibling;
+	var infoParagraph = infoBox.children[0];
+
+	if (hexItem.dataset.target === 'hexagon') {
+		if (!wrapper.classList.contains('clicked')) {
+			wrapper.classList.add('clicked');
+			hexItem.classList.add('clicked');
+			setTimeout(function () {
+				infoBox.classList.add('problem-information-active');
+				wrapper.classList.add('process-wrapper-active');
+				hexItem.classList.remove('process-item-shadow');
+				wrapper.style.backgroundColor = '#cc243b';
+			}, 300);
+			setTimeout(function () {
+				infoParagraph.classList.add('show');
+			}, 600);
+			setTimeout(function () {
+				return infoParagraph.classList.add('active');
+			}, 600);
+		} else {
+			setTimeout(function () {
+				infoBox.classList.remove('problem-information-active');
+				wrapper.classList.remove('process-wrapper-active');
+				wrapper.style.backgroundColor = '#fff';
+				infoParagraph.classList.remove('show');
+				infoParagraph.classList.remove('active');
+			}, 300);
+
+			setTimeout(function () {
+				wrapper.classList.remove('clicked');
+				hexItem.classList.remove('clicked');
+				hexItem.classList.add('process-item-shadow');
+			}, 400);
+		}
+	}
+}
+
+// Setup application
+function init() {
+	renderPortfolioItems().then(function () {
+		return window.addEventListener('scroll', checkSlide);
+	});
+
+	cycleWords(words);
+}
+
+// Event Listener
+window.addEventListener('scroll', handleScroll);
+mobileNav.addEventListener('click', openNav);
+closeButton.addEventListener('click', closeNav);
+sideNavLinks.forEach(function (link) {
+	return link.addEventListener('click', closeNav);
+});
+processListItems.forEach(function (listItem) {
+	return listItem.addEventListener('click', handleProcessClick);
+});
+
+// Initialize
+init();
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(2);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../node_modules/css-loader/index.js!./app.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!./app.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/** BASIC STYLES **/\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n\tfont-family: Satisfy, 'Open sans';\n}\n\np {\n\tfont-family: Roboto, sans-serif;\n\tcolor: #4e4e4e;\n\tfont-size: 1.2em;\n}\n\nbody {\n\tpadding-top: 80px;\n\tfont-family: Roboto, sans-serif;\n}\n\nhtml {\n\tmargin: 0;\n\tpadding: 0;\n}\n\na,\na:focus,\na:visited,\na:hover,\na:active {\n\ttext-decoration: none;\n\tcolor: inherit;\n}\n\n.text-header {\n\ttext-align: center;\n\tpadding: 60px;\n\tfont-size: 3.5em;\n\tcolor: #444343;\n\tfont-weight: bold;\n}\n\n.main-content {\n\theight: 500px;\n\tbackground: #004e92;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.main-content h1 {\n\tfont-family: Satisfy, Roboto;\n\tfont-size: 4em;\n\tcolor: #fff;\n\tmax-width: 50%;\n\ttext-align: center;\n\tpadding: 15px;\n\ttransition: all 0.5s ease;\n}\n\n#word {\n\tcolor: #f56815;\n}\n\n/** NAVBAR **/\n\n/** SIDENAV **/\n.sidenav {\n\theight: 100%; /* 100% Full-height */\n\twidth: 0; /* 0 width - change this with JavaScript */\n\tposition: fixed; /* Stay in place */\n\tz-index: 1000; /* Stay on top */\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: #fff; /* Black*/\n\toverflow-x: hidden; /* Disable horizontal scroll */\n\tpadding-top: 60px; /* Place content 60px from the top */\n\ttransition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n}\n\n/* The navigation menu links */\n.sidenav a {\n\tpadding: 8px 8px 8px 8px;\n\ttext-decoration: none;\n\tfont-size: 20px;\n\tcolor: #444444;\n\tdisplay: block;\n\ttransition: 0.3s;\n}\n\n/* When you mouse over the navigation links, change their color */\n.sidenav a:hover,\n.offcanvas a:focus {\n\tcolor: #696969;\n}\n\n/* Position and style the close button (top right corner) */\n.sidenav .closebtn {\n\tposition: absolute;\n\ttop: 0;\n\tright: 25px;\n\tfont-size: 36px;\n\tmargin-left: 50px;\n}\n\n.websmith-navbar {\n\tdisplay: flex;\n\tjustify-content: center;\n\tposition: fixed;\n\ttop: 0;\n\tz-index: 1000;\n\tbackground-color: #fff;\n\twidth: 100%;\n}\n\n.navbar-content {\n\tdisplay: flex;\n\talign-items: center;\n\twidth: 90%;\n\tposition: relative;\n}\n\n.navigation {\n\tlist-style-type: none;\n\tdisplay: flex;\n\tjustify-content: flex-end;\n\twidth: 100%;\n\tmargin-bottom: 0;\n\tmargin-left: auto;\n}\n\n.navigation li {\n\tpadding: 10px 20px;\n\tposition: relative;\n\tdisplay: flex;\n\tjustify-content: center;\n\tborder: 1px solid #004e92;\n\tmargin: 5px;\n\ttransition: all 0.5s;\n\tcolor: #004e92;\n\tfont-family: Roboto;\n\tfont-size: 1.1em;\n\tborder-radius: 3px;\n}\n\n.navigation li.mobile-navigation {\n\tdisplay: none;\n\tcursor: pointer;\n}\n\n.navigation li:hover {\n\tbackground-color: #004e92;\n\tcolor: #fff;\n}\n\n.logo {\n\tfont-family: 'Satisfy';\n\tcolor: #004e92;\n\tfont-weight: bold;\n}\n\n.scrolling {\n\tbox-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n}\n\n/**  PORTFOLIO STYLES **/\n\n#portfolio {\n\tpadding-bottom: 100px;\n}\n\n.portfolio-item {\n\tposition: relative;\n\tdisplay: block;\n\tmargin: 10px;\n\ttransition: all 1s ease-in-out;\n}\n\n.portfolio-item-active {\n\tbox-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n}\n\n.slide-in {\n\topacity: 0;\n\ttransform: translateX(-100%) scale(0.95);\n\ttransition: all 1s ease-in-out;\n}\n\n.slide-in-active {\n\topacity: 1;\n\ttransform: translateX(0) scale(1);\n}\n\n.portfolio-image {\n\twidth: 100%;\n\tdisplay: block;\n\theight: 240px;\n}\n\n.portfolio-image-overlay {\n\tposition: absolute;\n\ttop: 0;\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\theight: 100%;\n\twidth: 100%;\n\topacity: 0;\n\ttransition: 0.5s ease;\n\tbackground: #141e30; /* fallback for old browsers */\n\tbackground: -webkit-linear-gradient(to right, #243b55, #141e30); /* Chrome 10-25, Safari 5.1-6 */\n\tbackground: linear-gradient(\n\t\tto right,\n\t\t#243b55,\n\t\t#141e30\n\t); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n\n.portfolio-image-overlay-content {\n\tcolor: white;\n\tfont-size: 20px;\n\twidth: 100%;\n\tposition: absolute;\n\ttext-align: center;\n\ttop: 45%;\n\tleft: 50%;\n\ttransform: translate(-50%, -50%);\n\t-ms-transform: translate(-50%, -50%);\n}\n\n.portfolio-image-overlay-content h3 {\n\tpadding: 20px;\n}\n\n.portfolio-item:hover .portfolio-image-overlay {\n\topacity: 0.9;\n\tcursor: pointer;\n}\n\n.portfolio-button {\n\tborder: none;\n\tcolor: #fff;\n\tbackground-color: #141e30;\n\tborder: 2px solid #fff;\n\tpadding: 10px 20px;\n\tborder-radius: 3px;\n\tcursor: pointer;\n}\n\n.portfolio-button:hover {\n\tcursor: pointer;\n}\n\n.featured {\n\twidth: 100%;\n}\n\n.featured .portfolio-image {\n\twidth: 100%;\n\theight: auto;\n}\n\n.portfolio-button:focus {\n\toutline: none;\n}\n\n.special-offer {\n\tmargin: 80px auto 0 auto;\n\twidth: 60%;\n\tmax-width: 500px;\n\tborder: 3px solid #004e92;\n\tborder-radius: 3px;\n\tpadding: 30px;\n\ttext-align: center;\n}\n\n.special-offer h3 {\n\tpadding: 10px 0 20px 0;\n\tfont-size: 2.8em;\n\tcolor: #444343;\n}\n\n.special-offer p {\n\tline-height: 1.6;\n}\n\n.special-offer .fa-handshake-o {\n\tfont-size: 4em;\n\tcolor: #004e92;\n}\n\n.special-offer-button {\n\tborder: none;\n\tbackground-color: #f56815;\n\tpadding: 15px 40px;\n\twidth: 250px;\n\ttext-align: center;\n\tmargin: 25px auto 25px auto;\n}\n\n.bttn {\n\tborder-radius: 3px;\n\tfont-family: Satisfy;\n\tcolor: #fff;\n\tfont-size: 1.5em;\n\tbox-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);\n\ttransition: all 0.3s ease;\n}\n\n.bttn:hover {\n\tbox-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n}\n\n/**  SOCIAL MEDIA **/\n\n#social-media {\n\tpadding: 100px 0;\n\ttext-align: center;\n\tbackground-color: #004e92;\n}\n#social-media .fa {\n\tcolor: #fff;\n\tfont-size: 5em;\n\tpadding: 30px 20px;\n}\n#social-media .fa:hover {\n\tcolor: #002e56;\n\ttransition: ease 0.5s;\n}\n\n/** CONTACT ME */\n#contact-me {\n\tpadding-bottom: 60px;\n}\n\n#contact-me label {\n\tpadding: 5px;\n}\n\n.contact-text-input {\n\twidth: 100%;\n\tpadding: 8px;\n\tborder: none;\n\tborder-radius: 7px;\n\tbackground: #ededed;\n\ttransition: all 0.5s ease;\n\tborder-bottom: 2px solid #ededed;\n}\n.contact-text-input:focus {\n\tborder-bottom: 2px solid #f56815;\n\ttransition: ease 0.5s;\n\toutline: none;\n}\n\n.contact-textarea {\n\twidth: 100%;\n\tpadding: 8px;\n\tborder: none;\n\ttransition: all 0.5s ease;\n\tborder-radius: 7px;\n\tbackground: #ededed;\n\tborder-bottom: 2px solid #ededed;\n}\n\n.contact-textarea:focus {\n\tborder-bottom: 2px solid #f56815;\n\ttransition: ease 0.5s;\n\toutline: none;\n}\n\n.contact-button {\n\tfont-family: Satisfy;\n\tdisplay: block;\n\tmargin: 0 auto;\n\tcolor: #fff;\n\tborder-radius: 3px;\n\tbackground-color: #f56815;\n\tborder: none;\n\tpadding: 15px;\n\twidth: 100%;\n\tfont-size: 1.4em;\n\tcursor: pointer;\n}\n.contact-button .fa {\n\tmargin-right: 5px;\n}\n\n.contact-details {\n\tdisplay: flex;\n\tjustify-content: center;\n}\n.contact-details ul {\n\tlist-style-type: none;\n\tfont-size: 1.2em;\n}\n.contact-details ul li {\n\tpadding: 10px 0;\n}\n.contact-details ul li .fa-mobile {\n\tfont-size: 1.5em;\n\tmargin-right: 5px;\n}\n.contact-details ul li .fa-envelope {\n\tmargin-right: 3px;\n}\n.contact-details ul li .fa {\n\tcolor: #cc243b;\n}\n\n/**  PROCESS **/\n\n.process {\n\ttext-align: center;\n\tpadding-bottom: 60px;\n}\n\n.process-undertext {\n\tpadding-bottom: 40px;\n\tfont-size: 2em;\n}\n\n.process-list {\n\tlist-style-type: none;\n\tpadding-left: 0;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n}\n\n.process-list li {\n\twidth: 80%;\n\tmargin: 20px;\n\tposition: relative;\n}\n\n.process-item {\n\tbackground-color: #cc243b;\n\tborder-radius: 100%;\n\theight: 200px;\n\twidth: 200px;\n\tcolor: #fff;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\tflex-direction: column;\n\tcursor: pointer;\n\tmargin-bottom: 50px;\n}\n\n.process-link {\n\tposition: absolute;\n\tbackground-color: #cc243b;\n\theight: 250px;\n\twidth: 4px;\n\ttransform: translateY(-50px);\n}\n\n.process-item-shadow {\n\tbox-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n}\n\n.process-heading {\n\tmargin: 20px;\n}\n\n.process-wrapper .fa {\n\tmargin-top: 40px;\n\tfont-size: 3em;\n\tz-index: 999;\n}\n\n.process-wrapper .fa-times {\n\tposition: absolute;\n}\n\n.problem h3 {\n\tz-index: 999;\n\tmargin-top: 10px;\n}\n\n.process-wrapper {\n\tdisplay: flex;\n\tflex-direction: row;\n\tjustify-content: center;\n\ttransition: all 0.5s ease;\n\tmax-width: 750px;\n\tmargin: 0 auto;\n}\n\n.process-wrapper-active {\n\tbox-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n\twidth: 100%;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.process-content {\n\tcolor: #fff;\n\tpadding: 25px;\n\ttransition: all 0.5s;\n\topacity: 0;\n\theight: 0;\n\tdisplay: none;\n}\n\n.process-content.show {\n\tdisplay: block;\n}\n\n.process-content.active {\n\topacity: 1;\n\theight: 100%;\n}\n\n.problem-information {\n\tdisplay: flex;\n\tmargin-top: 20px;\n\topacity: 0;\n\theight: 0;\n\twidth: 0%;\n\ttransition: all 1s ease;\n}\n\n.problem-information-active {\n\tdisplay: block;\n\topacity: 1;\n\twidth: 100%;\n\theight: 100%;\n}\n\n/* LEARNING PROJECTS */\n\n#learning-projects {\n\tbackground-color: #004e92;\n\tpadding-bottom: 60px;\n}\n\n.learning-header {\n\tcolor: #fff;\n}\n\n.learning-box {\n\tbackground-color: #fff;\n\tpadding: 20px;\n\twidth: 100%;\n\tmargin: 0 auto 60px auto;\n\tborder-radius: 3px;\n\tbox-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n}\n\n.learning-box p {\n\tline-height: 1.7;\n\ttext-align: center;\n\tmargin: 25px;\n}\n\n.learning-box h2 {\n\ttext-align: center;\n\tpadding: 10px;\n}\n\n.learning-box .fa-book {\n\tfont-size: 4em;\n\tcolor: #004e92;\n\ttext-align: center;\n\tdisplay: block;\n\tpadding: 20px;\n}\n\n.learning-project-details {\n\tcolor: #fff;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n}\n\n.learning-tech-wrapper {\n\tborder: 2px solid #fff;\n\tmargin-top: 20px;\n\tpadding: 20px;\n}\n\n.learning-tech-wrapper ul {\n\tpadding-left: 0;\n}\n\n.learning-project-details-header {\n\tmargin-bottom: 20px;\n}\n\n.learning-tech-header {\n\tmargin: 30px 0;\n\ttext-align: center;\n}\n\n.learning-list,\n.learning-list-tech {\n\tlist-style-type: none;\n}\n\n.learning-list-tech {\n\tdisplay: flex;\n\tjustify-content: space-around;\n}\n\n.learning-list li,\n.learning-list-tech li {\n\tdisplay: flex;\n\talign-items: center;\n\tfont-family: Roboto, sans-serif;\n\tpadding: 5px;\n\tfont-size: 1.1em;\n}\n\n.learning-list li .fa {\n\tmargin-right: 8px;\n\tfont-size: 1.8em;\n}\n\n.tech-logo {\n\twidth: 80px;\n\theight: 80px;\n\tbackground-color: #fff;\n\tborder-radius: 100%;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\tbox-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n\ttransition: all 0.3s ease;\n}\n\n.tech-logo:hover {\n\tbox-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);\n}\n\n.tech-logo img {\n\twidth: 60px;\n\theight: 60px;\n}\n\n.learning-project-button {\n\tdisplay: block;\n\tmargin: 40px auto;\n\tbackground-color: #f56815;\n\tborder: none;\n\tpadding: 20px 40px;\n\ttext-align: center;\n\twidth: 200px;\n}\n\n/**  ABOUT ME **/\n\n#about-me {\n\tpadding-bottom: 100px;\n}\n\n#about-me img {\n\tborder-radius: 3px;\n\tbox-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);\n}\n\n#about-me p {\n\tline-height: 1.5;\n\tpadding: 5px;\n}\n\n#about-me a {\n\tcolor: #f56815;\n}\n\n.about-image-primary {\n\tposition: relative;\n\twidth: 100%;\n}\n\n.about-image-secondary {\n\tposition: absolute;\n\theight: 200px;\n\twidth: 150px;\n\ttop: -20px;\n\tleft: -10px;\n}\n\n.about-me-bttn {\n\tmargin-top: 50px;\n}\n\n/** MANIFESTO **/\n\n#manifesto {\n\tbackground-color: #004e92;\n\tcolor: #fff;\n\ttext-align: center;\n\tpadding-bottom: 100px;\n}\n\n#manifesto p {\n\tpadding: 20px;\n\tcolor: #fff;\n\tmax-width: 400px;\n\tmargin: 0 auto;\n\tline-height: 1.6;\n}\n\n#manifesto .fa {\n\tfont-size: 3.5em;\n}\n\n.manifesto-header {\n\tcolor: #fff;\n}\n\n.manifesto-wrapper {\n\tmargin-top: 40px;\n}\n\n.manifesto-design,\n.manifesto-coding,\n.manifesto-product {\n\tborder: 1px solid #fff;\n\tborder-radius: 3px;\n\tpadding: 20px;\n\tmargin: 40px 0;\n}\n\n.manifesto-product {\n\tmargin: 0;\n}\n\n/** INSPIRATION **/\n\n#inspiration {\n\tpadding-bottom: 60px;\n}\n\n.inspiration-card {\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: center;\n\talign-items: center;\n\ttext-align: center;\n\tbackground-color: #cc243b;\n\tcolor: #fff;\n\tborder-radius: 3px;\n\tpadding: 20px;\n\tmargin: 20px 0;\n\theight: 300px;\n\tbox-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n}\n\n.inspiration-card h3 {\n\tline-height: 1.5;\n}\n\n.inspiration-card p {\n\tcolor: #fff;\n\tpadding-top: 10px;\n\tfont-size: 1.1em;\n}\n\n/** FOUNDER OFFER **/\n#founder-offer {\n\tbackground-color: #004e92;\n\tpadding-bottom: 60px;\n}\n\n.learning-box .fa-lightbulb-o {\n\tfont-size: 4em;\n\tcolor: #004e92;\n\ttext-align: center;\n\tdisplay: block;\n\tpadding: 20px;\n}\n\n.founder-offer-header {\n\tcolor: #fff;\n}\n\n.founder-offer-requirements {\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n}\n\n.founder-offer-requirements h2 {\n\tcolor: #fff;\n}\n\n.number {\n\tbackground-color: #f56815;\n\tdisplay: inline;\n\tpadding: 5px 10px;\n\tborder-radius: 100%;\n\tmargin-right: 8px;\n\tcolor: #fff;\n\tbox-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n}\n\n.founder-offer-requirements ul {\n\tlist-style-type: none;\n\tpadding-left: 0;\n}\n\n.founder-offer-requirements ul li {\n\tmargin: 15px;\n\tcolor: #fff;\n\tfont-size: 1.1em;\n}\n\n.founder-offer-details {\n\tmargin-top: 25px;\n\tborder: 1px solid #fff;\n\twidth: 100%;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tpadding: 20px;\n}\n\n.founder-offer-details ul li {\n\tmargin: 0px;\n}\n\n/** FOOTER STYLES **/\n\n#websmith-footer {\n\tbackground-color: #004e92;\n\tpadding: 20px;\n\tmargin: 0;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.footer-contact {\n\tmargin-left: auto;\n\tlist-style-type: none;\n\tdisplay: flex;\n\tmargin-bottom: 0;\n}\n\n.footer-contact li {\n\tcolor: #fff;\n\tpadding: 10px;\n\tfont-size: 1.1em;\n}\n\n.footer-contact li .fa {\n\tmargin-right: 5px;\n\tfont-size: 1.2em;\n}\n\n.footer-contact li:last-child {\n\tpadding-bottom: 0;\n}\n\n.footer-logo {\n\tpadding: 0;\n\tmargin: 0;\n\tcolor: #fff;\n}\n\n/** MEDIA QUERIES **/\n\n@media (min-width: 1200px) {\n\t.portfolio-image {\n\t\theight: 300px;\n\t}\n}\n\n@media (max-width: 991px) {\n\t.portfolio-image {\n\t\theight: 200px;\n\t\tmargin-bottom: 40px;\n\t}\n\n\t#about-me img {\n\t\tdisplay: block;\n\t\tmargin: 0 auto;\n\t}\n\n\t.about-image-primary {\n\t\twidth: 50%;\n\t}\n\n\t#about-me {\n\t\ttext-align: center;\n\t}\n\n\t#about-me p {\n\t\twidth: 60%;\n\t\tmargin: 15px auto;\n\t}\n\t.inspiration-card {\n\t\tmargin-top: 40px;\n\t}\n\t.about-image-secondary {\n\t\tdisplay: block;\n\t\theight: 185px;\n\t\twidth: 140px;\n\t\ttop: -60px;\n\t\tleft: 5px;\n\t\tposition: inherit;\n\t}\n}\n\n@media (max-width: 768px) {\n\t.portfolio-image {\n\t\theight: auto;\n\t\tmargin-bottom: 40px;\n\t}\n\n\t.special-offer {\n\t\twidth: 95%;\n\t}\n\n\t.process-wrapper {\n\t\tflex-direction: column;\n\t\talign-items: center;\n\t}\n\t.process-content {\n\t\tpadding: 0 30px 30px 30px;\n\t\ttext-align: center;\n\t}\n\n\t.about-image-primary {\n\t\twidth: 90%;\n\t}\n\n\t#about-me {\n\t\ttext-align: center;\n\t}\n\t#websmith-footer {\n\t\tflex-direction: column;\n\t\talign-items: center;\n\t}\n\n\t#about-me p {\n\t\twidth: 100%;\n\t\tmargin: 15px auto;\n\t}\n\t.footer-contact {\n\t\tpadding: 25px;\n\t\tflex-direction: column;\n\t\talign-items: center;\n\t\tmargin-left: 0;\n\t}\n\t.footer-contact li {\n\t\tpadding: 10px;\n\t}\n\t.navigation li.mobile-navigation {\n\t\tdisplay: block;\n\t\tborder: none;\n\t\tfont-size: 2em;\n\t}\n\t.navigation li.main-nav-links {\n\t\tdisplay: none;\n\t}\n\t.main-content h1 {\n\t\tmax-width: 80%;\n\t}\n\t.process-item {\n\t\tmargin-bottom: 0;\n\t}\n}\n\n@media screen and (max-height: 450px) {\n\t.sidenav {\n\t\tpadding-top: 15px;\n\t}\n\t.sidenav a {\n\t\tfont-size: 18px;\n\t}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(selector) {
+		if (typeof memo[selector] === "undefined") {
+			memo[selector] = fn.call(this, selector);
+		}
+
+		return memo[selector]
+	};
+})(function (target) {
+	return document.querySelector(target)
+});
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(5);
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton) options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+	if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else {
+		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	options.attrs.type = "text/css";
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	options.attrs.type = "text/css";
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = options.transform(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = [{
+	name: 'Loopring',
+	description: '',
+	img: 'img/portfolio/loopring.png',
+	url: 'https://fredrikoseberg.github.io/loopring/#/'
+}, {
+	name: 'Wikipedia Viewer',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \
+					Aenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \
+					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
+					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
+					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
+	img: 'img/portfolio/historyFeature.png',
+	url: 'https://codepen.io/khare/full/yXzzxg/'
+}, {
+	name: 'Cryptodasher',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \
+					Aenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \
+					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
+					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
+					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
+	img: 'img/portfolio/cryptodash.png',
+	url: 'https://www.cryptodasher.com'
+}, {
+	name: 'Weather App',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \
+					Aenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \
+					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
+					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
+					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
+	img: 'img/portfolio/thumbnail004.png',
+	url: 'https://codepen.io/khare/full/vmaVqV/'
+}, {
+	name: 'Twitch JSON API',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \
+					Aenean mauris dui, pulvinar eleifend purus porta, mattis elementum orci. Ut quam lorem, auctor ut nunc nec, \
+					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
+					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
+					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
+	img: 'img/portfolio/thumbnail003.png',
+	url: 'https://codepen.io/khare/full/YQvXdq/'
+}];
+
+/***/ })
+/******/ ]);
