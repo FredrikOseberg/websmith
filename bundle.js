@@ -809,7 +809,7 @@ module.exports = function (css) {
 module.exports = [{
 	name: 'Loopring',
 	description: '',
-	img: 'img/portfolio/loopring.png',
+	img: 'img/portfolio/loopringThumb.png',
 	url: 'https://fredrikoseberg.github.io/loopring/#/'
 }, {
 	name: 'Wikipedia Viewer',
@@ -818,7 +818,7 @@ module.exports = [{
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-	img: 'img/portfolio/historyFeature.png',
+	img: 'img/portfolio/thumbnail001.png',
 	url: 'https://codepen.io/khare/full/yXzzxg/'
 }, {
 	name: 'Cryptodasher',
@@ -827,7 +827,7 @@ module.exports = [{
 					gravida scelerisque arcu. Aliquam congue justo ipsum, non varius enim congue vel. Phasellus vel neque egestas, \
 					ullamcorper neque consectetur, feugiat sapien. Quisque bibendum urna lorem, \
 					quis facilisis ligula rhoncus ut. Pellentesque at accumsan elit. Maecenas mollis eros sed enim volutpat, sed iaculis ipsum tincidunt.',
-	img: 'img/portfolio/cryptodash.png',
+	img: 'img/portfolio/crytpodashFeature.png',
 	url: 'https://www.cryptodasher.com'
 }, {
 	name: 'Weather App',
