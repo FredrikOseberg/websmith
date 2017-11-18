@@ -10,11 +10,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', (req, res) => {
-	if (req.connection.remoteAddress === '151.101.65.195') {
+	const ip = req.ip;
+	if (ip === '151.101.1.195' || ip === '151.101.65.195') {
 		const email = req.query.email;
 		addUserToEmailList(email);
 	} else {
-		res.send('You are not authorized to perform this operation');
+		res.send('You are not authorized to perform this action');
 	}
 });
 
