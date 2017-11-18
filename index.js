@@ -10,8 +10,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', (req, res) => {
-	const email = req.query.email;
-	addUserToEmailList(email);
+	if (req.connection.remoteAddress === '151.101.65.195') {
+		const email = req.query.email;
+		addUserToEmailList(email);
+	} else {
+		res.send('You are not authorized to perform this operation');
+	}
 });
 
 app.listen(port, () => {
