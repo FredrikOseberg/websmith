@@ -10,8 +10,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', (req, res) => {
-	// const email = res.query.email;
-	addUserToEmailList('fredrik.ose@gmail.com');
+	const email = res.query.email;
+	addUserToEmailList(email);
 });
 
 app.listen(port, () => {
