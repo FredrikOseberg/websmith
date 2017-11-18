@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', (req, res) => {
-	const email = req.body.email;
+	const email = req.query.email;
 	addUserToEmailList(email);
 });
 
