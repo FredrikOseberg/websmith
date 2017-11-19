@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', cors(corsOptions), (req, res, next) => {
+	res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
 	const email = req.query.email;
 	if (email) {
 		addUserToEmailList(email);
