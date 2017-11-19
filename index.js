@@ -5,7 +5,7 @@ const addUserToEmailList = require('./api/mailchimp');
 const cors = require('cors');
 
 const corsOptions = {
-	origin: '*',
+	origin: false,
 	optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
