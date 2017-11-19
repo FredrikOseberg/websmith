@@ -1,22 +1,21 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8080;
 const addUserToEmailList = require('./api/mailchimp');
-const cors = require('cors');
 
 app.use(express.static(__dirname));
 
-app.use(
-	cors({
-		origin: 'https://cryptodasher.com'
-	})
-);
+var corsOptions = {
+	origin: 'https://cryptodasher.com',
+	optionsSuccessStatus: 200
+};
 
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/home.html');
 });
 
-app.post('/addtoemail', (req, res) => {
+app.post('/addtoemail', cors(corsOptions), (req, res, next) => {
 	const email = req.query.email;
 	if (email) {
 		addUserToEmailList(email);
