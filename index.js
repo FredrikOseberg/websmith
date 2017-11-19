@@ -11,12 +11,18 @@ var corsOptions = {
 	optionsSuccessStatus: 200
 };
 
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', 'https://cryptodasher.com');
+	res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	next();
+});
+
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/home.html');
 });
 
 app.post('/addtoemail', cors(corsOptions), (req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
 	const email = req.query.email;
 	if (email) {
 		addUserToEmailList(email);
