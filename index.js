@@ -6,11 +6,16 @@ const addUserToEmailList = require('./api/mailchimp');
 
 app.use(express.static(__dirname));
 
+var corsOptions = {
+	origin: 'https://cryptodasher.com',
+	optionsSuccessStatus: 200
+};
+
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/home.html');
 });
 
-app.post('/addtoemail', cors(), (req, res, next) => {
+app.post('/addtoemail', cors(corsOptions), (req, res, next) => {
 	const email = req.query.email;
 	if (email) {
 		addUserToEmailList(email);
