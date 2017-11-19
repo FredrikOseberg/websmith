@@ -19,7 +19,6 @@ app.post('/addtoemail', cors(corsOptions), (req, res) => {
 	const email = req.query.email;
 	if (email) {
 		addUserToEmailList(email);
-		res.send('Success');
 	} else {
 		res.send('No email to add');
 	}

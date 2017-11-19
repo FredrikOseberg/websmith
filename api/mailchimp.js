@@ -2,7 +2,7 @@ var request = require('request');
 
 function callback(error, response, body) {
 	if (!error && response.statusCode == 200) {
-		console.log('Success');
+		response.send('Success');
 	}
 }
 
