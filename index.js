@@ -16,9 +16,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', cors(corsOptions), (req, res) => {
-	const email = req.query.email;
-	if (email) {
-		addUserToEmailList(email);
+	const origin = req.get('origin');
+
+	if (origin === 'https://cryptodasher.com') {
+		const email = req.query.email;
+		if (email) {
+			addUserToEmailList(email);
+		}
+	} else {
+		res.send('You are not authorized to perform this action');
 	}
 });
 
