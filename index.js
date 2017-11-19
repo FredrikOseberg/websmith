@@ -10,13 +10,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/addtoemail', (req, res) => {
-	const ip = req.ip;
-	if (ip === '151.101.1.195' || ip === '151.101.65.195') {
-		const email = req.query.email;
+	// const ip = req.ip;
+	// if (ip === '151.101.1.195' || ip === '151.101.65.195') {
+	const email = req.query.email;
+	if (email) {
 		addUserToEmailList(email);
-	} else {
-		res.send('You are not authorized to perform this action');
 	}
+	// } else {
+	// 	res.send('You are not authorized to perform this action');
+	// }
 });
 
 app.listen(port, () => {
