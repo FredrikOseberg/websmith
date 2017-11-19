@@ -5,7 +5,7 @@ const addUserToEmailList = require('./api/mailchimp');
 const cors = require('cors');
 
 const corsOptions = {
-	origin: 'http://cryptodasher.com',
+	origin: 'https://cryptodasher.com/',
 	optionsSuccessStatus: 200
 };
 
