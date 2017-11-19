@@ -15,10 +15,13 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/home.html');
 });
 
-app.post('/addtoemail', cors(corsOptions), (req, res, next) => {
+app.post('/addtoemail', cors(corsOptions), (req, res) => {
 	const email = req.query.email;
 	if (email) {
 		addUserToEmailList(email);
+		res.send('Success');
+	} else {
+		res.send('No email to add');
 	}
 });
 
