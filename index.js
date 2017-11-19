@@ -20,8 +20,9 @@ app.post('/addtoemail', cors(corsOptions), (req, res, next) => {
 	if (email) {
 		addUserToEmailList(email);
 		res.send('Success');
+	} else {
+		res.send('No email address to add');
 	}
-	res.send('No email');
 });
 
 app.listen(port, () => {
