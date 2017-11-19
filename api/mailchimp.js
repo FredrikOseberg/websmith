@@ -1,12 +1,14 @@
 var request = require('request');
 
 function callback(error, response, body) {
+	console.log(response);
 	if (!error && response.statusCode == 200) {
-		console.log('Success');
+		console.log('Successfully added email');
 	}
 }
 
 module.exports = email => {
+	console.log(email);
 	var options = {
 		url: 'https://us9.api.mailchimp.com/3.0/lists/11d80d6cd8/members/',
 		method: 'POST',
