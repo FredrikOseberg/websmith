@@ -6,7 +6,7 @@ admin.initializeApp({
 	credential: admin.credential.cert({
 		projectId: process.env.projectId,
 		clientEmail: process.env.clientEmail,
-		privateKey: process.env.firebaseKeyprocess.replace(/\\n/g, '\n')
+		privateKey: process.env.firebaseApiKey.replace(/\\n/g, '\n')
 	}),
 	databaseURL: process.env.dbName
 });
