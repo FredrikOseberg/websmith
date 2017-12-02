@@ -8,7 +8,6 @@ function callback(error, response, body) {
 }
 
 module.exports = email => {
-	console.log(email);
 	var options = {
 		url: 'https://us9.api.mailchimp.com/3.0/lists/11d80d6cd8/members/',
 		method: 'POST',
