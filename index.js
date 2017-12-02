@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 const addUserToEmailList = require('./api/mailchimp');
 const cors = require('cors');
-// const addPortfolioValue = require('./firebase/savePortfolioData');
+const addPortfolioValue = require('./firebase/savePortfolioData');
 
 const corsOptions = {
 	origin: 'https://cryptodasher.com',
@@ -31,9 +31,9 @@ app.post('/addtoemail', cors(corsOptions), (req, res) => {
 	}
 });
 
-// app.post('/addportfoliodata', cors(cronJobCors), (req, res) => {
-// 	addPortfolioValue(res);
-// });
+app.post('/addportfoliodata', cors(cronJobCors), (req, res) => {
+	addPortfolioValue(res);
+});
 
 app.listen(port, () => {
 	console.log('Listening');
