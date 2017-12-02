@@ -31,8 +31,13 @@ app.post('/addtoemail', cors(corsOptions), (req, res) => {
 	}
 });
 
-app.post('/addportfoliodata', cors(cronJobCors), (req, res) => {
-	addPortfolioValue(res);
+app.post('/addportfoliodata', (req, res) => {
+	const authorized = req.query.key === process.env.addPortfolioKey;
+	if (authorized) {
+		addPortfolioValue(res);
+	} else {
+		res.send('You are unauthorized to perform this action.');
+	}
 });
 
 app.listen(port, () => {
