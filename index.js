@@ -10,11 +10,6 @@ const corsOptions = {
 	optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-const cronJobCors = {
-	origin: 'https://cron-job.org/',
-	optionsSuccessStatus: 200
-};
-
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
@@ -31,7 +26,7 @@ app.post('/addtoemail', cors(corsOptions), (req, res) => {
 	}
 });
 
-app.post('/addportfoliodata', (req, res) => {
+app.get('/addportfoliodata', (req, res) => {
 	const authorized = req.query.key === process.env.addPortfolioKey;
 	if (authorized) {
 		addPortfolioValue(res);
@@ -41,5 +36,5 @@ app.post('/addportfoliodata', (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log('Listening');
+	console.log('Listening on' + port);
 });

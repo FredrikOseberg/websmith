@@ -14,48 +14,62 @@ admin.initializeApp({
 const db = admin.database();
 
 function addPortfolioValue(response) {
-	const databaseRef = db.ref('/users/Y7sfciTW9vOpW5HUv0tXLsBPVm32');
+	const databaseRef = db.ref('/users');
 
 	databaseRef.once('value', snapshot => {
-		let portfolioValue = 0;
-		const currencies = snapshot.child('currencies').val();
+		const users = snapshot.val();
+		const userUid = Object.keys(users);
 
-		const requests = map(currencies, currency => {
-			if (currency.wallet) {
-				return new Promise((resolve, reject) => {
-					axios
-						.get(`https://www.coincap.io/page/${currency.symbol}`)
-						.then(response => {
-							portfolioValue += response.data.price * currency.wallet.amount;
-							resolve();
-						})
-						.catch(error => {
-							reject(error);
-						});
-				});
-			}
+		userUid.map(user => {
+			addPortfolioValueToEachUser(user);
 		});
 
-		function addPortfolioVal(requests) {
-			Promise.all(requests)
-				.then(() => {
-					const timestamp = Date.now();
-					databaseRef
-						.child('portfolio')
-						.child(timestamp)
-						.set({
-							portfolioValue,
-							timestamp
-						});
-					response.send('Added portfoliovalue');
-				})
-				.catch(error => {
-					addPortfolioVal(requests);
-				});
-		}
-
-		addPortfolioVal(requests);
+		response.send('Added portfoliovalue');
 	});
+
+	function addPortfolioValueToEachUser(user) {
+		let portfolioValue = 0;
+		const databaseRef = db.ref(`/users/${user}`);
+
+		databaseRef.once('value', snapshot => {
+			const currencies = snapshot.child('currencies').val();
+			const requests = map(currencies, currency => {
+				if (currency.wallet) {
+					return new Promise((resolve, reject) => {
+						axios
+							.get(`https://www.coincap.io/page/${currency.symbol}`)
+							.then(response => {
+								portfolioValue += response.data.price * currency.wallet.amount;
+								resolve();
+							})
+							.catch(error => {
+								reject(error);
+							});
+					});
+				}
+			});
+
+			function addPortfolioVal(requests) {
+				Promise.all(requests)
+					.then(() => {
+						const timestamp = Date.now();
+						databaseRef
+							.child('portfolio')
+							.child('data')
+							.child(timestamp)
+							.set({
+								portfolioValue,
+								timestamp
+							});
+					})
+					.catch(error => {
+						addPortfolioVal(requests);
+					});
+			}
+
+			addPortfolioVal(requests);
+		});
+	}
 }
 
 module.exports = response => {
