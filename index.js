@@ -26,7 +26,7 @@ app.post('/addtoemail', cors(corsOptions), (req, res) => {
 	}
 });
 
-app.get('/addportfoliodata', (req, res) => {
+app.post('/addportfoliodata', (req, res) => {
 	const authorized = req.query.key === process.env.addPortfolioKey;
 	if (authorized) {
 		addPortfolioValue(res);
