@@ -810,7 +810,7 @@ module.exports = [{
 	name: 'Loopring',
 	description: '',
 	img: 'img/portfolio/loopringThumb.png',
-	url: 'https://fredrikoseberg.github.io/loopring/#/'
+	url: 'https://fredrikoseberg.github.io/loopringv2/'
 }, {
 	name: 'Wikipedia Viewer',
 	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum imperdiet nunc. \
